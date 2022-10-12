@@ -133,7 +133,7 @@
           ]
         },
         {
-          "width": 400,
+          "width": 378,
           "height": 280,
           "transform": [
             {
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "width": 1163,
+      "width": 1160,
       "height": 60,
       "mark": {"type": "line", "color": "#0939be"},
       "title": "Use this line chart to filter out the data based on time",
