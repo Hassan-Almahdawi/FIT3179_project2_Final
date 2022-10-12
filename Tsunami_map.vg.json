@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/Hassan-Almahdawi/FIT3179_project2_Final/main/data_filtered_tsunami_map.csv"
   },
   "title": "Tsunamis (1950-2017)",
-  "background": "rgb(232, 241, 254)",
+  "background": "#f5f9ff",
   "vconcat": [
     {
       "hconcat": [
