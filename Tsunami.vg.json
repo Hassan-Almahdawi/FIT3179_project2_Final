@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
-    "title": "Tsunami Statistics from 2000 to 2017",
+    "width": 500,
+    "height": 300,
+    "title": "",
+    "background":"#f5f9ff",
     "data": {
       "url": "https://raw.githubusercontent.com/Hassan-Almahdawi/fit3179/main/TsunameData_scatter.csv"
     },
@@ -124,8 +125,9 @@
           "type": "text",
           "align": "right",
           "baseline": "middle",
-          "dx": -12,
-          "fontSize": 11.5,
+          "dx": 22,
+          "dy": -12,
+          "fontSize": 10,
           "fontStyle": "italic"
         },
         "encoding": {
