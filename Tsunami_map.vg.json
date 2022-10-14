@@ -194,5 +194,5 @@
       }
     }
   ],
-  "config": {"title": {"font": "sans-serif", "fontSize": 16}}
+  "config": {"title": {"font": "sans-serif", "fontSize": 16, "color": "grey"}}
 }
