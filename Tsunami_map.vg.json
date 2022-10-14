@@ -9,7 +9,7 @@
     {
       "vconcat": [
         {
-          "width": 980,
+          "width": 1030,
           "height": 400,
           "projection": {"type": "equalEarth", "rotate": [-150, 0, 0]},
           "layer": [
@@ -141,7 +141,7 @@
       "encoding": {
         "x": {
           "field": "time",
-          "timeUnit": "yearmonth",
+          "timeUnit": "year",
           "axis": {"title": "", "format": "%Y"}
         },
         "y": {
@@ -167,7 +167,7 @@
               "field": "time",
               "timeUnit": "year",
               "scale": {"domain": {"param": "time_brush"}},
-              "axis": {"title": "", "tickCount": 7, "grid": false}
+              "axis": {"title": "", "format": "%Y", "grid": true}
             },
             "y": {"aggregate": "count", "title": "Count of Tsunamis"},
             "color": {
