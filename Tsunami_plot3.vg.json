@@ -27,11 +27,11 @@
         "field": "MAXIMUM_HEIGHT",
         "type": "quantitative",
         
-        "scale": {
-          "type": "threshold",
-          "domain": [0.5, 2, 5, 10, 20],
-          "range": [20, 40, 80, 120, 200, 500]
-        }
+      "scale": {
+        "type": "threshold",
+        "domain": [0.5, 2, 5, 10, 40],
+        "range": [20, 80, 200, 400, 800, 1500]
+      }
       },
       "color": {
             "field": "Contenient",
