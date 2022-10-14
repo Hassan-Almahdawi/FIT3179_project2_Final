@@ -9,7 +9,7 @@
     {
       "vconcat": [
         {
-          "width": 950,
+          "width": 980,
           "height": 400,
           "projection": {"type": "equalEarth", "rotate": [-150, 0, 0]},
           "layer": [
