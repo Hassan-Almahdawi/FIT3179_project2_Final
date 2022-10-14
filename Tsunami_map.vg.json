@@ -68,10 +68,9 @@
                   }
                 },
                 "tooltip": [
-                  {"field": "time", "type": "temporal"},
-                  {"field": "height", "type": "quantitative", "title": "height (m)"},
-                  {"field": "place", "type": "nominal"},
-                  {"field": "mag", "type": "quantitative"}
+                  {"field": "time", "type": "temporal", "title": "Year"},
+                  {"field": "height", "type": "quantitative", "title": "Height (m)"},
+                  {"field": "place", "type": "nominal",  "title": "Country"}
                 ]
               },
               "layer": [
@@ -113,10 +112,11 @@
                       "mark": {
                         "type": "text",
                         "align": "right",
-                        "dx": -8,
-                        "dy": -8,
+                        "dx": -10,
+                        "dy": -10,
                         "baseline": "middle",
-                        "fontStyle": "italic"
+                        "fontStyle": "italic",
+                        "fontSize":12
                       },
                       "encoding": {"text": {"field": "text_annotation"}}
                     }
@@ -147,7 +147,7 @@
         "y": {
           "aggregate": "count",
           "axis": {"tickCount": 5, "grid": false},
-          "title": "Count"
+          "title": "Tsunamis"
         }
       }
     },
