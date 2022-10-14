@@ -1,73 +1,73 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/Hassan-Almahdawi/FIT3179_project2_Final/main/TsunameData_scatter.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Hassan-Almahdawi/FIT3179_project2_Final/main/TsunameData_scatter.csv"
+  },
+
+    
+  "width": 500,
+  "height": 400,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.7
+  },
+  "encoding": {
+    
+    "x": {
+      "field": "YEAR",
+      "type": "temporal",
+      "axis": {"grid": false, "title": ""}
     },
-  
+    "y": {
+      "field": "Contenient",
+      "type": "nominal",
+      "axis": {"grid": true,"title": ""}
+    },
+    "size": {
+      "title": "Wave height (m)",
+      "field": "MAXIMUM_HEIGHT",
+      "type": "quantitative",
       
-    "width": 500,
-    "height": 400,
-    "title": "",
-    "background":"#f5f9ff",
-    "mark": {
-      "type": "circle",
-      "opacity": 0.7
-    },
-    "encoding": {
-      "legend": null,
-      "x": {
-        "field": "YEAR",
-        "type": "temporal",
-        "axis": {"grid": false, "title": ""}
-      },
-      "y": {
-        "field": "Contenient",
-        "type": "nominal",
-        "axis": {"grid": true,"title": ""}
-      },
-      "size": {
-        "title": "Wave height (m)",
-        "field": "MAXIMUM_HEIGHT",
-        "type": "quantitative",
-        
-      "scale": {
+        "scale": {
         "type": "threshold",
         "domain": [0.5, 2, 5, 10, 40],
         "range": [20, 80, 200, 400, 800, 1500]
-      }
       },
-      "color": {
-            "field": "Contenient",
-            "type": "nominal",
-            "scale": {
-              "domain": [
-                "North America",
-                "South America",
-                "Europe",
-                "Africa",
-                "Asia",
-                "Oceania",
-                "Australia"
-              ],
-              "range": [
-                "#e41a1c",
-                "#984ea3",
-                "#ff7f00",
-                "#a6cee3",
-                "#377eb8",
-                "#a65628",
-                "#66c2a5"
-              ]
-            }
+      "legend": null
+    },
+    "color": {
+          "field": "Contenient",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania",
+              "Australia"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628",
+              "#66c2a5"
+            ]
           },
-      "tooltip": [
-            {"field": "COUNTRY", "type": "nominal", "title": "Country"},
-            {"field": "Contenient", "type": "nominal"},
-            {"field": "YEAR", "type": "temporal", "title": "Year"},
-            {"field": "MAXIMUM_HEIGHT", "type": "quantitative", "format": ",", "title": "Maximum Height"},
-            {"field": "ALL_FATALITIES", "type": "quantitative", "format": ",", "title": "Deaths"},
-            {"field": "ALL_HOUSES_DESTROYED", "type": "quantitative", "format": ",", "title":"House Destroyed"}
-  
-          ]
-    }
+          "legend":null
+        },
+    "tooltip": [
+          {"field": "COUNTRY", "type": "nominal", "title": "Country"},
+          {"field": "Contenient", "type": "nominal"},
+          {"field": "YEAR", "type": "temporal", "title": "Year"},
+          {"field": "MAXIMUM_HEIGHT", "type": "quantitative", "format": ",", "title": "Maximum Height"},
+          {"field": "ALL_FATALITIES", "type": "quantitative", "format": ",", "title": "Deaths"},
+          {"field": "ALL_HOUSES_DESTROYED", "type": "quantitative", "format": ",", "title":"House Destroyed"}
+
+        ]
   }
+}
