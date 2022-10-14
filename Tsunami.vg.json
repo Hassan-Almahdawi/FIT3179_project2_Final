@@ -79,9 +79,11 @@
             "field": "MAXIMUM_HEIGHT",
             "type": "quantitative",
             "title": "Wave Height (m)",
-            "scale": {"domain": [0,10]}
-              
-            ,
+            "scale": {
+            "type": "threshold",
+            "domain": [0.5, 2, 5, 10, 40],
+            "range": [20, 80, 200, 400, 800, 1500]
+            },
             "legend": {"format": ".1s"}
           },
           "color": {
