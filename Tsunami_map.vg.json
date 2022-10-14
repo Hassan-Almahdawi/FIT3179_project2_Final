@@ -7,10 +7,10 @@
   "background": "#f5f9ff",
   "vconcat": [
     {
-      "hconcat": [
+      "vconcat": [
         {
-          "width": 600,
-          "height": 300,
+          "width": 1158,
+          "height": 400,
           "projection": {"type": "equalEarth", "rotate": [-150, 0, 0]},
           "layer": [
             {
@@ -64,13 +64,6 @@
                       "#ef6548",
                       "#d7301f",
                       "#990000"
-                      
-
-
-
-
-
-
                     ]
                   }
                 },
@@ -82,16 +75,18 @@
                 ]
               },
               "layer": [
-                {"mark": {"type": "circle", "opacity": 0.7, "size": 30}},
+                {"mark": {"type": "circle", "opacity": 0.8, "size": 30}},
                 {
                   "transform": [
                     {
-                      "window": [{"op": "rank", "as": "ranking"}],
-                      "sort": [{"field": "height", "order": "descending"}]
+                      "window": [{"op": "rank",
+                                 "as": "ranking"}],
+                      "sort": [{"field": "height",
+                               "order": "descending"}]
                     },
                     {"filter": "datum.ranking == 1"},
                     {
-                      "calculate": "'The worst wave height of; the selected period: ' + datum['height']",
+                      "calculate": "'The worst wave height of; the selected period: ' + datum.height",
                       "as": "text_annotation_raw"
                     },
                     {
@@ -103,8 +98,8 @@
                     {
                       "mark": {
                         "type": "point",
-                        "size": 200,
-                        "shape": "M0,.5L.6,.8L.5,.1L1,-.3L.3,-.4L0,-1L-.3,-.4L-1,-.3L-.5,.1L-.6,.8L0,.5Z"
+                        "size": 150,
+                        "shape": "triangle"
                       },
                       "encoding": {
                         "color": {
@@ -133,7 +128,31 @@
           ]
         },
         {
-          "width": 376,
+      "width": 1158,
+      "height": 60,
+      "mark": {"type": "line", "color": "#0939be"},
+      "title": "Use this line chart to filter out the data based on time",
+      "params": [
+        {
+          "name": "time_brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "time",
+          "timeUnit": "yearmonth",
+          "axis": {"title": "", "format": "%Y"}
+        },
+        "y": {
+          "aggregate": "count",
+          "axis": {"tickCount": 5, "grid": false},
+          "title": "Count"
+        }
+      }
+    },
+        {
+          "width": 1158,
           "height": 280,
           "transform": [
             {
@@ -168,30 +187,6 @@
           }
         }
       ]
-    },
-    {
-      "width": 1158,
-      "height": 60,
-      "mark": {"type": "line", "color": "#0939be"},
-      "title": "Use this line chart to filter out the data based on time",
-      "params": [
-        {
-          "name": "time_brush",
-          "select": {"type": "interval", "encodings": ["x"]}
-        }
-      ],
-      "encoding": {
-        "x": {
-          "field": "time",
-          "timeUnit": "yearmonth",
-          "axis": {"title": "", "format": "%Y"}
-        },
-        "y": {
-          "aggregate": "count",
-          "axis": {"tickCount": 5, "grid": false},
-          "title": "Count"
-        }
-      }
     }
   ],
   "config": {"title": {"font": "sans-serif", "fontSize": 16, "color": "grey"}}
