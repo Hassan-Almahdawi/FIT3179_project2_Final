@@ -91,7 +91,8 @@
                       "text": {"field": "place", "type": "nominal"},
                       "color": {
                         "condition": {"test": "datum['height'] > 35 & datum.height != 190 " , "value":"#990000"},
-                        "value": "0"
+                        "value":null
+                        
                       }
                     }
                   }
